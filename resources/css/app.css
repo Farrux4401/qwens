@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hide scrollbar */
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    img {
+        max-width: max-content;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    /*  */
+    .dark {
+        background-color: black;
+    }
+    .dark .colored-bordered-block {
+        position: relative;
+    }
+
+    .dark .colored-bordered-block::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 34px;
+        padding: 1.4px;
+
+        background: linear-gradient(
+            316.49deg,
+            rgba(255, 255, 255, 0.4) -7.66%,
+            rgba(255, 255, 255, 0.0001) 1.48%,
+            rgba(255, 255, 255, 0.0001) 2.06%,
+            rgba(255, 255, 255, 0.1) 8.26%
+        );
+
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    .dark .colored-bordered-block.active-border::before {
+        background: linear-gradient(
+            173.83deg,
+            rgba(255, 255, 255, 0.4) 4.82%,
+            rgba(255, 255, 255, 0.0001) 38.08%,
+            rgba(255, 255, 255, 0.0001) 56.68%,
+            rgba(255, 255, 255, 0.1) 95.1%
+        );
+    }
+
+    .dark .colored-bordered-block.without-border::before {
+        content: unset;
+    }
+
+    .dark .right-part {
+        width: 100%;
+        position: relative;
+        background: linear-gradient(162.22deg, rgba(128, 128, 128, 0.3) -113.99%, rgba(128, 128, 128, 0) 87.86%);
+        background-blend-mode: luminosity;
+        border-radius: 34px 34px 0px 0;
+        /* padding: 55px 62px; */
+        height: 100%;
+    }
+
+    .dark .right-part::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 34px 34px 0px 0;
+        padding: 1px;
+
+        background: linear-gradient(
+            156.52deg,
+            rgba(255, 255, 255, 0.4) 2.12%,
+            rgba(255, 255, 255, 0.0001) 39%,
+            rgba(255, 255, 255, 0.0001) 54.33%,
+            rgba(255, 255, 255, 0.1) 93.02%
+        );
+
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    [x-cloak] {
+        display: none;
+    }
+    .line {
+        background: repeating-linear-gradient(to bottom, #eee, #eee 1px, #fff 1px, #fff 8%);
+    }
+    .tick {
+        background: repeating-linear-gradient(to right, #eee, #eee 1px, #fff 1px, #fff 5%);
+    }
+}
