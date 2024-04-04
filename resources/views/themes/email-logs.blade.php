@@ -4,10 +4,10 @@
     <div class="right-part py-8 md:px-16 px-5 rounded-[46px] bg-white dark:backdrop-blur-[100px]">
         <div
             class="dark:text-white flex justify-between mb-9 dark:border-b pb-6 dark:border-[#313131] border-b border-[#313131]/[0.22]">
-            <p class="text-2xl font-medium">
+            <p class="md:text-2xl text-[13px] font-medium">
                 Журналы эл.почты
             </p>
-            <div class="flex items-center gap-3">
+            <div class="lg:flex hidden items-center gap-3">
                 <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                         class="h-[40px] w-[40px]"></a>
                 <a href="#"

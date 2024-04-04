@@ -4,10 +4,10 @@
     <div class="">
         <div class="right-part py-8 md:px-16 px-5  dark:rounded-[46px]  backdrop-blur-[100px]">
             <div class="dark:text-white flex justify-between mb-9 border-b pb-6 dark:border-[#313131]">
-                <p class="text-2xl font-medium">
+                <p class="md:text-2xl text-[13px] font-medium">
                     Налоги
                 </p>
-                <div class="flex items-center gap-3">
+                <div class="lg:flex hidden items-center gap-3">
                     <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                             class="h-[40px] w-[40px]"></a>
                     <a href="#"
@@ -26,7 +26,7 @@
 
                 <div>
                     <div>
-                        <form class="flex md:flex-nowrap flex-wrap gap-8">
+                        <form class="flex xl:flex-nowrap flex-wrap gap-8">
                             <div class="flex flex-wrap flex-col gap-8 w-full md:w-[750px]">
                                 <div
                                     class="block md:hidden md:max-w-[750px] rounded-none md:rounded-[54px]  w-full p-10 overflow-hidden border-none md:border md:border-[#000000]/[0.13] md:dark:border md:dark:border-white/[0.13]">

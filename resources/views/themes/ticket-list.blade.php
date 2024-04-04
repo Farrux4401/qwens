@@ -8,7 +8,7 @@
 
                 <div class="font-sfpro">
                     <ul class="flex w-full px-5 gap-x-11">
-                        <li class="text-2xl font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
+                        <li class="md:text-2xl text-[13px] font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
                             x-bind:class="{ 'text-[#000] dark:text-[#fff]': tab === 'tab1' }">
                             Список тикетов
                         </li>
@@ -17,7 +17,7 @@
 
                 </div>
 
-                <div class="flex items-center gap-3">
+                <div class="lg:flex hidden items-center gap-3">
                     <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                             class="h-[40px] w-[40px]"></a>
                     <a href="#"
@@ -108,7 +108,8 @@
                                                         </td>
                                                         <td class="px-6 text-center py-7">
                                                             <div class="flex items-center justify-center gap-2 font-inter">
-                                                                <span class="md:text-2xl text-xs block dark:text-white/[0.87]">На
+                                                                <span
+                                                                    class="md:text-2xl text-xs block dark:text-white/[0.87]">На
                                                                     рассмотрении</span>
                                                                 <span
                                                                     class="block bg-[#E7B70C] w-3 h-3 rounded-full"></span>

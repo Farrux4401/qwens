@@ -1,13 +1,13 @@
 @extends('components.layouts.dashboard')
 
 @section('main-content')
-    <div class="light">
+    <div class="">
         <div x-data="{ tab: 'tab1' }" class="right-part py-8 px-16 rounded-[46px] bg-white dark:backdrop-blur-[100px]">
             <div class="dark:text-white flex justify-between mb-9 border-b pb-6 dark:border-[#313131]">
 
                 <div class="font-sfpro">
                     <ul class="flex w-full px-5 gap-x-11">
-                        <li class="text-2xl font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
+                        <li class="md:text-2xl text-[13px] font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
                             x-bind:class="{ 'text-[#000] dark:text-[#fff]': tab === 'tab1' }">
                             Создать тикет пользователю
                         </li>
@@ -15,7 +15,7 @@
 
                 </div>
 
-                <div class="flex items-center gap-3">
+                <div class="lg:flex hidden items-center gap-3">
                     <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                             class="h-[40px] w-[40px]"></a>
                     <a href="#"
@@ -26,7 +26,7 @@
             <div>
                 <div class="py-10">
                     <div x-show="tab === 'tab1'">
-                        <div class="flex gap-7">
+                        <div class="flex flex-wrap xl:flex-nowrap gap-7">
                             <div class="basis-2/4">
                                 <div>
                                     <div

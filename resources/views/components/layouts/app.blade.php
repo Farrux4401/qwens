@@ -25,7 +25,6 @@
 <body class="antialiased bg-white font-sfpro dark:bg-black">
 
     <div>
-
         @yield('content')
     </div>
 

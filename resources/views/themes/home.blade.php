@@ -8,13 +8,13 @@
 
                 <div class="font-sfpro">
                     <ul class="flex w-full px-5 gap-x-11">
-                        <li class="text-2xl font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
+                        <li class="md:text-2xl text-[13px] font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
                             x-bind:class="{ 'text-[#000] dark:text-[#fff]': tab === 'tab1' }">
                             Главная
                         </li>
                     </ul>
                 </div>
-                <div class="flex items-center gap-3">
+                <div class="lg:flex hidden items-center gap-3">
                     <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                             class="h-[40px] w-[40px]"></a>
                     <a href="#"
@@ -39,7 +39,7 @@
 
                                     <div class="flex flex-col gap-5 ">
                                         <div
-                                            class="flex flex-col xl:flex-row xl:items-center items-start gap-5 justify-between dark:bg-[#808080]/[0.05] dark:border dark:border-white/15 border border-[000000]/[0.13] rounded-[54px] overflow-hidden py-12 px-8">
+                                            class="flex flex-col xl:flex-row xl:items-center items-start gap-5 justify-between dark:bg-[#808080]/[0.05] dark:border dark:border-white/15 border border-[000000]/[0.13] rounded-[54px] overflow-hidden py-12 px-8 overflow-x-auto no-scrollbar">
                                             <div class="flex flex-col items-start gap-4 ">
                                                 <span
                                                     class="mb-2 flex justify-center items-center rounded-full bg-[#202020] w-11 h-11 font-inter font-medium text-2xl text-white">1</span>

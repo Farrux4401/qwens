@@ -4,12 +4,12 @@
     <!-- This is an example component -->
     <div class="bg-white dark:bg-black">
         <nav class="fixed z-30 w-full bg-white dark:bg-black">
-            <div class="px-3 py-3 xl:px-5 xl:pl-3">
-                <div x-data="{ showMenu: false }" class="block md:hidden">
+            <div class="px-3 py-3 lg:px-5 lg:pl-3">
+                <div x-data="{ showMenu: false }" class="block lg:hidden">
                     <div class="flex justify-between items-center w-full z-30">
                         <div class="flex items-center">
                             <a href="/"
-                                class=" text-xl mx-auto text-center justify-center font-bold flex items-center lg:ml-2.5">
+                                class="text-xl mx-auto text-center justify-center font-bold flex items-center lg:ml-2.5">
                                 <img src="{{ asset('assets/images/logo.svg') }}" class="w-[30px] h-[26px] mr-2"
                                     alt="Logo">
                             </a>
@@ -29,7 +29,7 @@
 
                     <div x-show="showMenu">
                         <aside id="sidebar"
-                            class=" flex flex-col flex-shrink-0 h-full pt-6 duration-75 xl:flex transition-width"
+                            class="flex flex-col flex-shrink-0 h-full pt-6 duration-75 lg:flex transition-width"
                             aria-label="Sidebar">
 
                             <div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white dark:bg-black">
@@ -154,16 +154,45 @@
 
             {{-- SideBar --}}
             @include('components.layouts.sidebar')
+            <button x-data={darkMode=true} @click="$store.darkMode.toggle()"
+                class="w-8 h-8 flex absolute lg:top-3 top-5 lg:right-5 right-[200px] z-40">
+
+                <div x-if="!darkMode" class="flex">
+                    <svg class="block flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                </div>
+
+                <div class="absolute right-5 flex">
+                    <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                        viewBox="0 0 24 24" fill="#000" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </div>
+
+
+
+
+            </button>
+
 
 
 
             <div class="fixed inset-0 z-10 hidden bg-gray-900 opacity-50" id="sidebarBackdrop"></div>
-            <div id="main-content" class="relative w-full h-full xl:mr-8 m-0 overflow-y-auto xl:ml-72">
+            <div id="main-content" class="relative w-full h-full lg:mr-8 m-0 overflow-y-auto lg:ml-72">
                 {{-- Main Content --}}
-                <main>
-                    <button x-data={darkMode=true} @click="$store.darkMode.toggle()" class="text-white bg-red-400">Toggle
-                        Dark
-                        Mode</button>
+                <main class="relative">
+
                     @yield('main-content')
                 </main>
             </div>

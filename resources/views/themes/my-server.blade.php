@@ -8,13 +8,13 @@
                 <div class="font-sfpro">
                     <ul class="flex w-full px-5 gap-x-11">
                         <li @click="tab = 'tab1'"
-                            class="text-2xl font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
+                            class="md:text-2xl text-[13px] font-medium cursor-pointer text-[#000]/[0.22] dark:text-[#fff]/[0.25]"
                             x-bind:class="{ 'text-[#000] dark:text-[#fff]': tab === 'tab1' }">
                             Главная
                         </li>
                     </ul>
                 </div>
-                <div class="flex items-center gap-3">
+                <div class="lg:flex hidden items-center gap-3">
                     <a href="#"><img src="{{ asset('assets/images/Avatar-big.png') }}" alt=""
                             class="h-[40px] w-[40px]"></a>
                     <a href="#"
